@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="initialContent" >
+        <div style="justify-content: center; align-items: center; display: flex;">
+
+            <img src="./11.gif" alt="">
+        </div>
+
+        <div class="two">
+            <h1>կլինես իմ վալենտինկան</h1>
+
+        </div>
+
+
+
+        <div class="div-btn">
+            <button class="glow-on-hover  button2" onclick="changeContent()" type="button">Այո</button>
+            <button class="glow-on-hover button1" onclick="changeSize()" type="button">Ոչ</button>
+
+        </div>
+
+
+    </div>
+
+    <div id="newContent" style="display: none;">
+        <img class="giff"  src="./22.gif" alt="">
+
+  
+
+        <div class="twoo">
+            <p>Շնորհավոր</p>
+
+        </div>
+    </div>
+
+    <script>
+        // Изначальный размер кнопки
+        var currentFontSize = 16;
+        var currentPadding = 10;
+
+        // Функция для изменения размера кнопки
+        function changeSize() {
+            // Находим кнопку по классу
+            var buttonToChange = document.querySelector('.button2');
+
+            // Увеличиваем размер кнопки
+            currentFontSize += 5; // увеличиваем размер шрифта на 2 пикселя
+            currentPadding += 25; // увеличиваем отступ на 1 пиксель
+
+            // Изменяем размер кнопки
+            buttonToChange.style.fontSize = currentFontSize + 'px';
+            buttonToChange.style.padding = currentPadding + 'px';
+        }
+    </script>
+
+
+
+    <script>
+        // Функция для изменения контента
+        function changeContent() {
+            // Находим элементы по их id
+            var initialContent = document.getElementById('initialContent');
+            var newContent = document.getElementById('newContent');
+
+            // Скрываем начальный контент и показываем новый контент
+            initialContent.style.display = 'none';
+            newContent.style.display = 'block';
+        }
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>
